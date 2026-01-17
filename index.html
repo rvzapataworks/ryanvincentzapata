@@ -12,45 +12,16 @@
 
     body {
       font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #020617 0%, #0b1220 100%);
       color: #e5e7eb;
       line-height: 1.7;
-      background: linear-gradient(120deg, #020617, #0f172a, #020617);
-      background-size: 300% 300%;
-      animation: bgMove 18s ease infinite;
       overflow-x: hidden;
     }
 
-    @keyframes bgMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    /* floating glow */
-    .bg-shape {
-      position: absolute;
-      width: 420px;
-      height: 420px;
-      background: radial-gradient(circle, rgba(56,189,248,0.18), transparent 70%);
-      filter: blur(45px);
-      animation: float 22s infinite alternate ease-in-out;
-      z-index: 0;
-    }
-
-    .shape1 { top: -120px; left: -120px; }
-    .shape2 { bottom: -150px; right: -150px; animation-delay: 6s; }
-
-    @keyframes float {
-      from { transform: translateY(0px); }
-      to { transform: translateY(90px); }
-    }
-
     section {
-      position: relative;
-      z-index: 1;
-      padding: 110px 20px;
       max-width: 1150px;
       margin: auto;
+      padding: 100px 20px;
     }
 
     h1, h2, h3 {
@@ -58,20 +29,29 @@
       font-weight: 600;
     }
 
-    h2 { font-size: 2.1rem; margin-bottom: 20px; }
+    h2 {
+      font-size: 2.1rem;
+      margin-bottom: 20px;
+    }
 
-    p { color: #cbd5e1; font-size: 1.05rem; }
+    p {
+      color: #cbd5e1;
+      font-size: 1.05rem;
+    }
 
-    a { text-decoration: none; color: inherit; }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
     /* ================= HERO ================= */
 
     .hero {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
-      align-items: center;
       gap: 60px;
-      padding-top: 170px;
+      align-items: center;
+      padding-top: 160px;
     }
 
     @media (max-width: 900px) {
@@ -81,40 +61,28 @@
       }
     }
 
-    /* Portrait Frame */
+    /* Portrait */
     .portrait-wrap {
       position: relative;
       max-width: 380px;
       margin: auto;
-      border-radius: 24px;
+      border-radius: 26px;
       overflow: hidden;
-      box-shadow: 0 30px 80px rgba(15,23,42,0.85);
-    }
-
-    .portrait-wrap::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        140deg,
-        rgba(56,189,248,0.35),
-        rgba(14,165,233,0.15),
-        transparent 65%
-      );
-      z-index: 1;
-      pointer-events: none;
+      background: #ffffff;
+      box-shadow: 0 30px 70px rgba(15,23,42,0.85);
     }
 
     .portrait-wrap::after {
       content: "";
       position: absolute;
-      top: 0;
-      right: 0;
-      width: 10px;
-      height: 100%;
-      background: linear-gradient(180deg, #38bdf8, #0ea5e9);
-      opacity: 0.9;
-      z-index: 2;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,0.85) 100%
+      );
+      opacity: 0.12;
+      pointer-events: none;
     }
 
     .portrait-img {
@@ -126,13 +94,13 @@
 
     /* Hero Text */
     .hero-text h1 {
-      font-size: 3.1rem;
+      font-size: 3rem;
       margin-bottom: 10px;
-      letter-spacing: -0.6px;
+      letter-spacing: -0.5px;
     }
 
     .hero-text span {
-      color: #38bdf8;
+      color: #e5e7eb;
     }
 
     .hero-text h3 {
@@ -149,19 +117,19 @@
     .btn {
       display: inline-block;
       padding: 15px 34px;
-      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+      background: #ffffff;
       color: #020617;
       font-weight: 600;
       border-radius: 10px;
       margin: 6px 10px 6px 0;
-      transition: all 0.3s ease;
-      box-shadow: 0 12px 30px rgba(56,189,248,0.35);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
     }
 
     .btn.secondary {
       background: transparent;
-      border: 2px solid #38bdf8;
-      color: #38bdf8;
+      border: 2px solid #e5e7eb;
+      color: #e5e7eb;
       box-shadow: none;
     }
 
@@ -173,8 +141,8 @@
     }
 
     .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 18px 40px rgba(56,189,248,0.45);
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.45);
     }
 
     /* ================= GRID ================= */
@@ -187,36 +155,39 @@
     }
 
     .card {
-      background: rgba(2,6,23,0.85);
-      backdrop-filter: blur(8px);
-      padding: 30px;
-      border-radius: 16px;
+      background: #020617;
+      padding: 32px;
+      border-radius: 18px;
       border: 1px solid #1e293b;
-      transition: all 0.35s ease;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
     .card:hover {
-      transform: translateY(-8px);
-      border-color: #38bdf8;
-      box-shadow: 0 20px 45px rgba(15,23,42,0.9);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(15,23,42,0.85);
     }
 
     ul { list-style: none; margin-top: 12px; }
 
-    ul li { margin-bottom: 8px; font-size: 0.95rem; }
+    ul li {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
 
     ul li::before {
       content: "✓ ";
-      color: #38bdf8;
+      color: #e5e7eb;
       font-weight: 600;
     }
 
-    .contact { text-align: center; }
+    .contact {
+      text-align: center;
+    }
 
     footer {
       text-align: center;
-      padding: 38px;
-      background: rgba(2,6,23,0.9);
+      padding: 36px;
+      background: #020617;
       color: #64748b;
       font-size: 0.9rem;
     }
@@ -224,18 +195,16 @@
 </head>
 <body>
 
-  <!-- Background Shapes -->
-  <div class="bg-shape shape1"></div>
-  <div class="bg-shape shape2"></div>
-
   <!-- HERO -->
   <section class="hero">
     <div class="hero-text">
-      <h1>Ryan <span>Vincent Zapata</span></h1>
+      <h1>Ryan Vincent Zapata</h1>
       <h3>Digital Marketing Specialist • SEO Specialist • Social Media Manager</h3>
+
       <p>
-        I help businesses grow through SEO-driven strategies, accurate analytics,
-        and consistent social media execution that turns visibility into measurable results.
+        I help businesses grow through SEO-driven strategies, clean analytics,
+        and consistent social media execution that supports long-term visibility
+        and measurable growth.
       </p>
 
       <a href="#contact" class="btn">Hire Me</a>
@@ -254,8 +223,8 @@
     <p>
       I am a Digital Marketing Specialist with <strong>2 years of professional experience</strong>,
       specializing in <strong>SEO</strong> while also managing social media content,
-      planning, and visual design. My focus is on sustainable growth, clean data,
-      and long-term online visibility.
+      planning, and visual design. My work focuses on clean execution,
+      accurate tracking, and sustainable digital growth.
     </p>
   </section>
 
@@ -290,7 +259,7 @@
   <!-- SAMPLE WORKS -->
   <section id="samples">
     <h2>Sample Works</h2>
-    <p>View selected SEO samples, reports, and social media workflows.</p>
+    <p>Selected SEO samples, reports, and social media workflows.</p>
     <br>
     <a href="https://your-sample-works-link-here" target="_blank" class="btn">
       View Sample Works
