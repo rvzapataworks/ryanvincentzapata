@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ryan Vincent Zapata | Digital Marketing & SEO Specialist</title>
 
-  <!-- FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -17,9 +16,9 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #0f172a;
+      background: #0b1220;
       color: #e5e7eb;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     a {
@@ -34,59 +33,70 @@
     }
 
     h1, h2, h3 {
-      color: #f8fafc;
+      color: #f9fafb;
+      font-weight: 600;
     }
 
     h2 {
-      font-size: 2.2rem;
+      font-size: 2.1rem;
       margin-bottom: 20px;
     }
 
     p {
-      color: #cbd5f5;
+      color: #cbd5e1;
+      font-size: 1rem;
     }
 
     /* ================= HERO ================= */
 
     .hero {
       text-align: center;
-      padding-top: 130px;
+      padding-top: 160px; /* ibinaba ang content */
     }
 
     .profile-pic {
-      width: 160px;
-      height: 160px;
+      width: 170px;
+      height: 170px;
       border-radius: 50%;
       object-fit: cover;
-      border: 4px solid #38bdf8;
-      margin-bottom: 20px;
-      box-shadow: 0 10px 30px rgba(56,189,248,0.25);
+      object-position: top; /* para mas kita ang mukha */
+      border: 3px solid #38bdf8;
+      margin-bottom: 28px;
+      box-shadow: 0 12px 35px rgba(15, 23, 42, 0.6);
     }
 
     .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
+      font-size: 2.9rem;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
     }
 
     .hero span {
       color: #38bdf8;
     }
 
+    .hero h3 {
+      font-weight: 500;
+      color: #94a3b8;
+      margin-bottom: 18px;
+    }
+
     .hero p {
-      max-width: 750px;
+      max-width: 760px;
       margin: auto;
-      margin-bottom: 30px;
+      margin-bottom: 36px;
+      font-size: 1.05rem;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 28px;
+      padding: 14px 30px;
       background: #38bdf8;
       color: #020617;
       font-weight: 600;
       border-radius: 8px;
-      margin: 10px;
-      transition: 0.3s;
+      margin: 8px;
+      transition: all 0.25s ease;
     }
 
     .btn.secondary {
@@ -95,8 +105,15 @@
       color: #38bdf8;
     }
 
+    .btn.ghost {
+      background: transparent;
+      border: 1px solid #334155;
+      color: #cbd5e1;
+    }
+
     .btn:hover {
-      opacity: 0.85;
+      transform: translateY(-2px);
+      opacity: 0.9;
     }
 
     /* ================= GRID ================= */
@@ -104,30 +121,37 @@
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
+      gap: 26px;
       margin-top: 40px;
     }
 
     .card {
       background: #020617;
-      padding: 25px;
+      padding: 28px;
       border-radius: 12px;
       border: 1px solid #1e293b;
-      transition: 0.3s;
+      transition: all 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
       border-color: #38bdf8;
     }
 
     ul {
       list-style: none;
+      margin-top: 10px;
+    }
+
+    ul li {
+      margin-bottom: 6px;
+      font-size: 0.95rem;
     }
 
     ul li::before {
-      content: "✔ ";
+      content: "✓ ";
       color: #38bdf8;
+      font-weight: 600;
     }
 
     /* ================= CONTACT ================= */
@@ -138,7 +162,7 @@
 
     footer {
       text-align: center;
-      padding: 30px;
+      padding: 32px;
       background: #020617;
       color: #64748b;
       font-size: 0.9rem;
@@ -150,14 +174,18 @@
   <!-- HERO -->
   <section class="hero">
     <img src="profile.jpg" alt="Ryan Vincent Zapata" class="profile-pic">
+
     <h1>Ryan <span>Vincent Zapata</span></h1>
-    <h3>Digital Marketing Specialist | SEO Specialist | Social Media Manager</h3>
+    <h3>Digital Marketing Specialist • SEO Specialist • Social Media Manager</h3>
+
     <p>
-      I help businesses grow their online visibility through SEO-driven strategies,
-      analytics-based decisions, and consistent social media execution.
+      I help businesses grow through SEO-driven strategies, accurate analytics,
+      and consistent social media execution that supports long-term visibility and revenue growth.
     </p>
+
     <a href="#contact" class="btn">Hire Me</a>
-    <a href="#services" class="btn secondary">View Services</a>
+    <a href="#services" class="btn secondary">Services</a>
+    <a href="#samples" class="btn ghost">View Sample Works</a>
   </section>
 
   <!-- ABOUT -->
@@ -166,8 +194,9 @@
     <p>
       I am a Digital Marketing Specialist with <strong>2 years of professional experience</strong>,
       specializing in <strong>SEO</strong> while also handling social media posting,
-      content planning, and basic graphic design. I help businesses improve search visibility,
-      track performance, and maintain an active online presence.
+      content planning, and visual design using Canva.
+      My work focuses on improving search visibility, tracking performance,
+      and maintaining a strong online presence across platforms.
     </p>
   </section>
 
@@ -176,7 +205,7 @@
     <h2>Core Services</h2>
     <div class="grid">
       <div class="card">
-        <h3>🔍 SEO & Digital Marketing</h3>
+        <h3>SEO & Digital Marketing</h3>
         <ul>
           <li>On-page & basic technical SEO</li>
           <li>Keyword research & optimization</li>
@@ -187,16 +216,28 @@
       </div>
 
       <div class="card">
-        <h3>📱 Social Media Management</h3>
+        <h3>Social Media Management</h3>
         <ul>
           <li>Content posting & scheduling</li>
           <li>Content planning</li>
-          <li>Basic design using Canva</li>
+          <li>Canva-based visual design</li>
           <li>Facebook, Instagram & X management</li>
           <li>Insights & performance tracking</li>
         </ul>
       </div>
     </div>
+  </section>
+
+  <!-- SAMPLE WORKS -->
+  <section id="samples">
+    <h2>Sample Works</h2>
+    <p>
+      You can view selected sample works, mock projects, and workflows through the link below.
+    </p>
+    <br>
+    <a href="https://your-sample-works-link-here" target="_blank" class="btn">
+      View Sample Works
+    </a>
   </section>
 
   <!-- TOOLS -->
@@ -219,8 +260,10 @@
   <section id="contact" class="contact">
     <h2>Let’s Work Together</h2>
     <p>Open for freelance, contract-based, and long-term projects</p>
-    <a href="mailto:ryanvincentzapataworks@email.com" class="btn">Email Me</a>
-    <a href="https://facebook.com/yourpage" class="btn secondary">Facebook</a>
+    <br>
+    <a href="mailto:ryanvincentzapataworks@gmail.com" class="btn">
+      ryanvincentzapataworks@gmail.com
+    </a>
   </section>
 
   <footer>
