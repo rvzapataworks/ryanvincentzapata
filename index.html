@@ -4,46 +4,80 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ryan Vincent Zapata | Digital Marketing & SEO Specialist</title>
+
+  <!-- FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
       background: #0f172a;
       color: #e5e7eb;
       line-height: 1.6;
     }
-    a { color: inherit; text-decoration: none; }
-    section { padding: 90px 20px; max-width: 1100px; margin: auto; }
-    h1, h2, h3 { color: #f8fafc; }
-    h2 { font-size: 2.2rem; margin-bottom: 20px; }
-    p { color: #cbd5f5; }
 
-    /* HERO */
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 90px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h1, h2, h3 {
+      color: #f8fafc;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #cbd5f5;
+    }
+
+    /* ================= HERO ================= */
+
     .hero {
       text-align: center;
       padding-top: 130px;
     }
+
     .profile-pic {
-      width: 140px;
-      height: 140px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid #38bdf8;
       margin-bottom: 20px;
+      box-shadow: 0 10px 30px rgba(56,189,248,0.25);
     }
+
     .hero h1 {
       font-size: 3rem;
       margin-bottom: 10px;
     }
+
     .hero span {
       color: #38bdf8;
     }
+
     .hero p {
-      max-width: 720px;
+      max-width: 750px;
       margin: auto;
       margin-bottom: 30px;
     }
+
     .btn {
       display: inline-block;
       padding: 14px 28px;
@@ -54,20 +88,26 @@
       margin: 10px;
       transition: 0.3s;
     }
+
     .btn.secondary {
       background: transparent;
       border: 2px solid #38bdf8;
       color: #38bdf8;
     }
-    .btn:hover { opacity: 0.85; }
 
-    /* GRID */
+    .btn:hover {
+      opacity: 0.85;
+    }
+
+    /* ================= GRID ================= */
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 25px;
       margin-top: 40px;
     }
+
     .card {
       background: #020617;
       padding: 25px;
@@ -75,16 +115,22 @@
       border: 1px solid #1e293b;
       transition: 0.3s;
     }
+
     .card:hover {
       transform: translateY(-5px);
       border-color: #38bdf8;
     }
 
-    ul { list-style: none; }
+    ul {
+      list-style: none;
+    }
+
     ul li::before {
       content: "✔ ";
       color: #38bdf8;
     }
+
+    /* ================= CONTACT ================= */
 
     .contact {
       text-align: center;
@@ -103,8 +149,8 @@
 
   <!-- HERO -->
   <section class="hero">
-    <img src="profile.jpg" alt="Ryan Zapata" class="profile-pic">
-    <h1>Ryan <span>Zapata</span></h1>
+    <img src="profile.jpg" alt="Ryan Vincent Zapata" class="profile-pic">
+    <h1>Ryan <span>Vincent Zapata</span></h1>
     <h3>Digital Marketing Specialist | SEO Specialist | Social Media Manager</h3>
     <p>
       I help businesses grow their online visibility through SEO-driven strategies,
@@ -119,9 +165,9 @@
     <h2>About Me</h2>
     <p>
       I am a Digital Marketing Specialist with <strong>2 years of professional experience</strong>,
-      specializing in <strong>SEO</strong> while also handling social media posting, content planning,
-      and basic graphic design. I support businesses by improving search visibility,
-      tracking performance, and maintaining an active social media presence.
+      specializing in <strong>SEO</strong> while also handling social media posting,
+      content planning, and basic graphic design. I help businesses improve search visibility,
+      track performance, and maintain an active online presence.
     </p>
   </section>
 
@@ -139,6 +185,7 @@
           <li>SEO audits & competitor analysis</li>
         </ul>
       </div>
+
       <div class="card">
         <h3>📱 Social Media Management</h3>
         <ul>
@@ -158,7 +205,8 @@
     <div class="grid">
       <div class="card">Meta Business Suite (Planner)</div>
       <div class="card">Canva</div>
-      <div class="card">GA4 & Google Tag Manager</div>
+      <div class="card">Google Analytics 4 (GA4)</div>
+      <div class="card">Google Tag Manager (GTM)</div>
       <div class="card">Google Search Console</div>
       <div class="card">Google Business Profile</div>
       <div class="card">Ahrefs</div>
@@ -171,7 +219,7 @@
   <section id="contact" class="contact">
     <h2>Let’s Work Together</h2>
     <p>Open for freelance, contract-based, and long-term projects</p>
-    <a href="mailto:your@email.com" class="btn">Email Me</a>
+    <a href="mailto:ryanvincentzapataworks@email.com" class="btn">Email Me</a>
     <a href="https://facebook.com/yourpage" class="btn secondary">Facebook</a>
   </section>
 
