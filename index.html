@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ryan Zapata | SMM & General VA</title>
+  <title>Ryan Vincent Zapata | Digital Marketing & SEO Specialist</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -14,7 +14,7 @@
       line-height: 1.6;
     }
     a { color: inherit; text-decoration: none; }
-    section { padding: 80px 20px; max-width: 1100px; margin: auto; }
+    section { padding: 90px 20px; max-width: 1100px; margin: auto; }
     h1, h2, h3 { color: #f8fafc; }
     h2 { font-size: 2.2rem; margin-bottom: 20px; }
     p { color: #cbd5f5; }
@@ -22,17 +22,25 @@
     /* HERO */
     .hero {
       text-align: center;
-      padding-top: 120px;
+      padding-top: 130px;
+    }
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #38bdf8;
+      margin-bottom: 20px;
     }
     .hero h1 {
       font-size: 3rem;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
     .hero span {
       color: #38bdf8;
     }
     .hero p {
-      max-width: 650px;
+      max-width: 720px;
       margin: auto;
       margin-bottom: 30px;
     }
@@ -56,7 +64,7 @@
     /* GRID */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 25px;
       margin-top: 40px;
     }
@@ -72,14 +80,12 @@
       border-color: #38bdf8;
     }
 
-    /* LIST */
     ul { list-style: none; }
     ul li::before {
       content: "✔ ";
       color: #38bdf8;
     }
 
-    /* CONTACT */
     .contact {
       text-align: center;
     }
@@ -97,11 +103,12 @@
 
   <!-- HERO -->
   <section class="hero">
-    <h1>Hi, I'm <span>Ryan Zapata</span></h1>
-    <h3>Social Media Manager & General Virtual Assistant</h3>
+    <img src="profile.jpg" alt="Ryan Zapata" class="profile-pic">
+    <h1>Ryan <span>Zapata</span></h1>
+    <h3>Digital Marketing Specialist | SEO Specialist | Social Media Manager</h3>
     <p>
-      I help business owners grow their online presence, manage daily operations,
-      and save time through organized, reliable, and results-driven support.
+      I help businesses grow their online visibility through SEO-driven strategies,
+      analytics-based decisions, and consistent social media execution.
     </p>
     <a href="#contact" class="btn">Hire Me</a>
     <a href="#services" class="btn secondary">View Services</a>
@@ -111,83 +118,65 @@
   <section>
     <h2>About Me</h2>
     <p>
-      I’m a dedicated freelancer specializing in Social Media Management and General Virtual Assistance.
-      I handle content creation, scheduling, inbox management, data entry, and admin tasks —
-      allowing clients to focus on growing their business.
+      I am a Digital Marketing Specialist with <strong>2 years of professional experience</strong>,
+      specializing in <strong>SEO</strong> while also handling social media posting, content planning,
+      and basic graphic design. I support businesses by improving search visibility,
+      tracking performance, and maintaining an active social media presence.
     </p>
   </section>
 
   <!-- SERVICES -->
   <section id="services">
-    <h2>Services</h2>
+    <h2>Core Services</h2>
     <div class="grid">
+      <div class="card">
+        <h3>🔍 SEO & Digital Marketing</h3>
+        <ul>
+          <li>On-page & basic technical SEO</li>
+          <li>Keyword research & optimization</li>
+          <li>Google Search Console monitoring</li>
+          <li>Local SEO & GBP optimization</li>
+          <li>SEO audits & competitor analysis</li>
+        </ul>
+      </div>
       <div class="card">
         <h3>📱 Social Media Management</h3>
         <ul>
+          <li>Content posting & scheduling</li>
           <li>Content planning</li>
-          <li>Caption writing</li>
-          <li>Hashtag research</li>
-          <li>Post scheduling</li>
-          <li>Basic analytics report</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>🧑‍💻 General Virtual Assistant</h3>
-        <ul>
-          <li>Email & inbox management</li>
-          <li>Data entry</li>
-          <li>Calendar scheduling</li>
-          <li>Google Docs & Sheets</li>
-          <li>Online research</li>
+          <li>Basic design using Canva</li>
+          <li>Facebook, Instagram & X management</li>
+          <li>Insights & performance tracking</li>
         </ul>
       </div>
     </div>
-  </section>
-
-  <!-- SAMPLE WORK -->
-  <section>
-    <h2>Sample Work</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Social Media Content</h3>
-        <p>Sample Facebook & Instagram posts created using Canva.</p>
-      </div>
-      <div class="card">
-        <h3>Content Calendar</h3>
-        <p>Sample 30-day content calendar using Google Sheets.</p>
-      </div>
-      <div class="card">
-        <h3>Admin Workflow</h3>
-        <p>Email handling and task organization sample process.</p>
-      </div>
-    </div>
-    <p style="margin-top:15px; font-size:0.9rem;">
-      *Samples are for demonstration purposes only.
-    </p>
   </section>
 
   <!-- TOOLS -->
   <section>
-    <h2>Tools I Use</h2>
+    <h2>Tools & Platforms</h2>
     <div class="grid">
+      <div class="card">Meta Business Suite (Planner)</div>
       <div class="card">Canva</div>
-      <div class="card">Meta Business Suite</div>
-      <div class="card">Google Workspace</div>
-      <div class="card">ChatGPT</div>
-      <div class="card">Trello / Notion</div>
+      <div class="card">GA4 & Google Tag Manager</div>
+      <div class="card">Google Search Console</div>
+      <div class="card">Google Business Profile</div>
+      <div class="card">Ahrefs</div>
+      <div class="card">SEMrush</div>
+      <div class="card">BrightLocal</div>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="contact">
     <h2>Let’s Work Together</h2>
-    <p>Available for freelance and long-term collaboration</p>
+    <p>Open for freelance, contract-based, and long-term projects</p>
     <a href="mailto:your@email.com" class="btn">Email Me</a>
-    <a href="https://facebook.com/" class="btn secondary">Facebook</a>
+    <a href="https://facebook.com/yourpage" class="btn secondary">Facebook</a>
   </section>
 
   <footer>
-    © 2026 Ryan Zapata • Freelance SMM & General VA
+    © 2026 Ryan Vincent Zapata • Digital Marketing & SEO Specialist
   </footer>
 
 </body>
