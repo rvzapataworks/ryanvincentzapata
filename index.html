@@ -5,280 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ryan Vincent Zapata | Digital Marketing & SEO Specialist</title>
 
+  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(180deg, #020617 0%, #0b1220 100%);
-      color: #e5e7eb;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-
-    section {
-      max-width: 1150px;
-      margin: auto;
-      padding: 100px 20px;
-    }
-
-    h1, h2, h3 {
-      color: #f9fafb;
-      font-weight: 600;
-    }
-
-    h2 {
-      font-size: 2.1rem;
-      margin-bottom: 20px;
-    }
-
-    p {
-      color: #cbd5e1;
-      font-size: 1.05rem;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* ================= HERO ================= */
-
-    .hero {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 60px;
-      align-items: center;
-      padding-top: 160px;
-    }
-
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-    }
-
-    /* Portrait */
-    .portrait-wrap {
-      position: relative;
-      max-width: 380px;
-      margin: auto;
-      border-radius: 26px;
-      overflow: hidden;
-      background: #ffffff;
-      box-shadow: 0 30px 70px rgba(15,23,42,0.85);
-    }
-
-    .portrait-wrap::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        180deg,
-        rgba(255,255,255,0) 0%,
-        rgba(255,255,255,0.85) 100%
-      );
-      opacity: 0.12;
-      pointer-events: none;
-    }
-
-    .portrait-img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
-    }
-
-    /* Hero Text */
-    .hero-text h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      letter-spacing: -0.5px;
-    }
-
-    .hero-text span {
-      color: #e5e7eb;
-    }
-
-    .hero-text h3 {
-      font-weight: 500;
-      color: #94a3b8;
-      margin-bottom: 22px;
-    }
-
-    .hero-text p {
-      max-width: 560px;
-      margin-bottom: 36px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 15px 34px;
-      background: #ffffff;
-      color: #020617;
-      font-weight: 600;
-      border-radius: 10px;
-      margin: 6px 10px 6px 0;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
-    }
-
-    .btn.secondary {
-      background: transparent;
-      border: 2px solid #e5e7eb;
-      color: #e5e7eb;
-      box-shadow: none;
-    }
-
-    .btn.ghost {
-      background: transparent;
-      border: 1px solid #334155;
-      color: #cbd5e1;
-      box-shadow: none;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 14px 30px rgba(0,0,0,0.45);
-    }
-
-    /* ================= GRID ================= */
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .card {
-      background: #020617;
-      padding: 32px;
-      border-radius: 18px;
-      border: 1px solid #1e293b;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 40px rgba(15,23,42,0.85);
-    }
-
-    ul { list-style: none; margin-top: 12px; }
-
-    ul li {
-      margin-bottom: 8px;
-      font-size: 0.95rem;
-    }
-
-    ul li::before {
-      content: "✓ ";
-      color: #e5e7eb;
-      font-weight: 600;
-    }
-
-    .contact {
-      text-align: center;
-    }
-
-    footer {
-      text-align: center;
-      padding: 36px;
-      background: #020617;
-      color: #64748b;
-      font-size: 0.9rem;
-    }
-  </style>
 </head>
 <body>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-text">
-      <h1>Ryan Vincent Zapata</h1>
-      <h3>Digital Marketing Specialist • SEO Specialist • Social Media Manager</h3>
+    <div class="hero-bg"></div>
 
+    <div class="hero-content reveal">
+      <h1>Ryan Vincent Zapata</h1>
+      <h3>Digital Marketing • SEO • Social Media</h3>
       <p>
-        I help businesses grow through SEO-driven strategies, clean analytics,
-        and consistent social media execution that supports long-term visibility
-        and measurable growth.
+        I help brands grow through SEO-driven strategies,
+        clean analytics, and consistent digital execution.
       </p>
 
-      <a href="#contact" class="btn">Hire Me</a>
-      <a href="#services" class="btn secondary">Services</a>
-      <a href="#samples" class="btn ghost">View Sample Works</a>
+      <div class="hero-actions">
+        <a href="#contact" class="btn primary">Hire Me</a>
+        <a href="#samples" class="btn ghost">View Sample Works</a>
+      </div>
     </div>
 
-    <div class="portrait-wrap">
-      <img src="profile.jpg" alt="Ryan Vincent Zapata" class="portrait-img">
+    <div class="hero-image reveal">
+      <img src="profile.jpg" alt="Ryan Vincent Zapata">
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section>
+  <section class="section reveal">
     <h2>About Me</h2>
     <p>
-      I am a Digital Marketing Specialist with <strong>2 years of professional experience</strong>,
-      specializing in <strong>SEO</strong> while also managing social media content,
-      planning, and visual design. My work focuses on clean execution,
-      accurate tracking, and sustainable digital growth.
+      I am a Digital Marketing Specialist with <strong>2 years of experience</strong>,
+      specializing in SEO while also managing social media content, planning,
+      and visual execution. My work focuses on sustainable growth and
+      data-backed decision making.
     </p>
   </section>
 
   <!-- SERVICES -->
-  <section id="services">
+  <section class="section reveal">
     <h2>Core Services</h2>
-    <div class="grid">
+    <div class="cards">
       <div class="card">
-        <h3>SEO & Digital Marketing</h3>
+        <h4>SEO & Digital Marketing</h4>
         <ul>
-          <li>On-page & basic technical SEO</li>
-          <li>Keyword research & optimization</li>
-          <li>Google Search Console monitoring</li>
+          <li>On-page & technical SEO</li>
+          <li>Keyword research & audits</li>
+          <li>GSC, GA4, GTM monitoring</li>
           <li>Local SEO & GBP optimization</li>
-          <li>SEO audits & competitor analysis</li>
         </ul>
       </div>
 
       <div class="card">
-        <h3>Social Media Management</h3>
+        <h4>Social Media Management</h4>
         <ul>
           <li>Content posting & scheduling</li>
           <li>Content planning</li>
-          <li>Canva-based visual design</li>
-          <li>Facebook, Instagram & X management</li>
-          <li>Insights & performance tracking</li>
+          <li>Canva design</li>
+          <li>Insights & reporting</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- SAMPLE WORKS -->
-  <section id="samples">
+  <!-- SAMPLES -->
+  <section id="samples" class="section reveal">
     <h2>Sample Works</h2>
     <p>Selected SEO samples, reports, and social media workflows.</p>
-    <br>
-    <a href="https://your-sample-works-link-here" target="_blank" class="btn">
+    <a href="https://your-sample-works-link-here" target="_blank" class="btn primary">
       View Sample Works
     </a>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="contact">
+  <section id="contact" class="section contact reveal">
     <h2>Let’s Work Together</h2>
-    <p>Open for freelance, contract-based, and long-term projects</p>
-    <br>
-    <a href="mailto:ryanvincentzapataworks@gmail.com" class="btn">
+    <p>Open for freelance & long-term projects</p>
+    <a href="mailto:ryanvincentzapataworks@gmail.com" class="btn primary">
       ryanvincentzapataworks@gmail.com
     </a>
   </section>
 
   <footer>
-    © 2026 Ryan Vincent Zapata • Digital Marketing & SEO Specialist
+    © 2026 Ryan Vincent Zapata
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
