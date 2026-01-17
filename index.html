@@ -16,9 +16,37 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #0b1220;
       color: #e5e7eb;
       line-height: 1.7;
+      background: linear-gradient(120deg, #020617, #0f172a, #020617);
+      background-size: 300% 300%;
+      animation: bgMove 18s ease infinite;
+      overflow-x: hidden;
+    }
+
+    @keyframes bgMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* floating glow elements */
+    .bg-shape {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(56,189,248,0.18), transparent 70%);
+      filter: blur(40px);
+      animation: float 20s infinite alternate ease-in-out;
+      z-index: 0;
+    }
+
+    .shape1 { top: -100px; left: -100px; }
+    .shape2 { bottom: -120px; right: -120px; animation-delay: 5s; }
+
+    @keyframes float {
+      from { transform: translateY(0px); }
+      to { transform: translateY(80px); }
     }
 
     a {
@@ -27,7 +55,9 @@
     }
 
     section {
-      padding: 90px 20px;
+      position: relative;
+      z-index: 1;
+      padding: 100px 20px;
       max-width: 1100px;
       margin: auto;
     }
@@ -44,14 +74,14 @@
 
     p {
       color: #cbd5e1;
-      font-size: 1rem;
+      font-size: 1.05rem;
     }
 
     /* ================= HERO ================= */
 
     .hero {
       text-align: center;
-      padding-top: 160px; /* ibinaba ang content */
+      padding-top: 180px;
     }
 
     .profile-pic {
@@ -59,16 +89,16 @@
       height: 170px;
       border-radius: 50%;
       object-fit: cover;
-      object-position: top; /* para mas kita ang mukha */
+      object-position: top;
       border: 3px solid #38bdf8;
-      margin-bottom: 28px;
-      box-shadow: 0 12px 35px rgba(15, 23, 42, 0.6);
+      margin-bottom: 30px;
+      box-shadow: 0 15px 40px rgba(56,189,248,0.35);
     }
 
     .hero h1 {
-      font-size: 2.9rem;
-      margin-bottom: 8px;
-      letter-spacing: -0.5px;
+      font-size: 3rem;
+      margin-bottom: 10px;
+      letter-spacing: -0.6px;
     }
 
     .hero span {
@@ -78,42 +108,44 @@
     .hero h3 {
       font-weight: 500;
       color: #94a3b8;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
 
     .hero p {
-      max-width: 760px;
+      max-width: 780px;
       margin: auto;
-      margin-bottom: 36px;
-      font-size: 1.05rem;
+      margin-bottom: 40px;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 30px;
-      background: #38bdf8;
+      padding: 15px 34px;
+      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
       color: #020617;
       font-weight: 600;
-      border-radius: 8px;
+      border-radius: 10px;
       margin: 8px;
-      transition: all 0.25s ease;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 25px rgba(56,189,248,0.35);
     }
 
     .btn.secondary {
       background: transparent;
       border: 2px solid #38bdf8;
       color: #38bdf8;
+      box-shadow: none;
     }
 
     .btn.ghost {
       background: transparent;
       border: 1px solid #334155;
       color: #cbd5e1;
+      box-shadow: none;
     }
 
     .btn:hover {
-      transform: translateY(-2px);
-      opacity: 0.9;
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 15px 35px rgba(56,189,248,0.45);
     }
 
     /* ================= GRID ================= */
@@ -121,30 +153,32 @@
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 26px;
+      gap: 28px;
       margin-top: 40px;
     }
 
     .card {
-      background: #020617;
-      padding: 28px;
-      border-radius: 12px;
+      background: rgba(2,6,23,0.85);
+      backdrop-filter: blur(8px);
+      padding: 30px;
+      border-radius: 14px;
       border: 1px solid #1e293b;
-      transition: all 0.3s ease;
+      transition: all 0.35s ease;
     }
 
     .card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-8px);
       border-color: #38bdf8;
+      box-shadow: 0 20px 40px rgba(15,23,42,0.8);
     }
 
     ul {
       list-style: none;
-      margin-top: 10px;
+      margin-top: 12px;
     }
 
     ul li {
-      margin-bottom: 6px;
+      margin-bottom: 8px;
       font-size: 0.95rem;
     }
 
@@ -162,14 +196,18 @@
 
     footer {
       text-align: center;
-      padding: 32px;
-      background: #020617;
+      padding: 36px;
+      background: rgba(2,6,23,0.9);
       color: #64748b;
       font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
+
+  <!-- Background Shapes -->
+  <div class="bg-shape shape1"></div>
+  <div class="bg-shape shape2"></div>
 
   <!-- HERO -->
   <section class="hero">
@@ -180,7 +218,7 @@
 
     <p>
       I help businesses grow through SEO-driven strategies, accurate analytics,
-      and consistent social media execution that supports long-term visibility and revenue growth.
+      and consistent social media execution that turns visibility into real results.
     </p>
 
     <a href="#contact" class="btn">Hire Me</a>
@@ -193,10 +231,9 @@
     <h2>About Me</h2>
     <p>
       I am a Digital Marketing Specialist with <strong>2 years of professional experience</strong>,
-      specializing in <strong>SEO</strong> while also handling social media posting,
-      content planning, and visual design using Canva.
-      My work focuses on improving search visibility, tracking performance,
-      and maintaining a strong online presence across platforms.
+      specializing in <strong>SEO</strong> while also managing social media content,
+      planning, and visual design. My focus is on sustainable growth, data accuracy,
+      and long-term online visibility.
     </p>
   </section>
 
@@ -232,28 +269,12 @@
   <section id="samples">
     <h2>Sample Works</h2>
     <p>
-      You can view selected sample works, mock projects, and workflows through the link below.
+      View selected sample projects, SEO reports, and social media workflows below.
     </p>
     <br>
     <a href="https://your-sample-works-link-here" target="_blank" class="btn">
       View Sample Works
     </a>
-  </section>
-
-  <!-- TOOLS -->
-  <section>
-    <h2>Tools & Platforms</h2>
-    <div class="grid">
-      <div class="card">Meta Business Suite (Planner)</div>
-      <div class="card">Canva</div>
-      <div class="card">Google Analytics 4 (GA4)</div>
-      <div class="card">Google Tag Manager (GTM)</div>
-      <div class="card">Google Search Console</div>
-      <div class="card">Google Business Profile</div>
-      <div class="card">Ahrefs</div>
-      <div class="card">SEMrush</div>
-      <div class="card">BrightLocal</div>
-    </div>
   </section>
 
   <!-- CONTACT -->
