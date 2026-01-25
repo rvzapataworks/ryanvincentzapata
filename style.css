@@ -1,3 +1,4 @@
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -22,30 +23,30 @@ body {
   inset: 0;
   background: #020617;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   z-index: 9999;
 }
 
 #loader img {
   width: 120px;
-  animation: pulse 1.6s infinite ease-in-out;
+  animation: pulse 1.6s ease-in-out infinite;
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); opacity: .6; }
+  0% { transform: scale(1); opacity: 0.6; }
   50% { transform: scale(1.08); opacity: 1; }
-  100% { transform: scale(1); opacity: .6; }
+  100% { transform: scale(1); opacity: 0.6; }
 }
 
 /* ================= NAVBAR ================= */
 .navbar {
   position: sticky;
   top: 0;
-  background: rgba(2,6,23,0.9);
+  z-index: 1000;
+  background: rgba(2, 6, 23, 0.9);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid #1e293b;
-  z-index: 1000;
 }
 
 .nav-inner {
@@ -55,16 +56,19 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 72px;
 }
 
 .logo img {
   height: 40px;
+  width: auto;
+  display: block;
 }
 
 .nav-links a {
   margin-left: 22px;
-  color: #cbd5f5;
   font-size: 0.95rem;
+  color: #cbd5f5;
 }
 
 .nav-links a:hover {
@@ -79,10 +83,10 @@ body {
 /* ================= HERO ================= */
 .hero {
   padding: 160px 0 140px;
-  background:
-    linear-gradient(rgba(2,6,23,.9), rgba(2,6,23,.95)),
-    radial-gradient(circle at 30% 30%, rgba(56,189,248,.25), transparent 40%);
   position: relative;
+  background:
+    linear-gradient(rgba(2,6,23,0.9), rgba(2,6,23,0.95)),
+    radial-gradient(circle at 30% 30%, rgba(56,189,248,0.25), transparent 40%);
 }
 
 .hero-inner {
@@ -90,13 +94,23 @@ body {
   margin: auto;
   padding: 0 28px;
   display: grid;
-  grid-template-columns: 1.1fr .9fr;
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 80px;
   align-items: center;
 }
 
 .hero-desc {
   margin-bottom: 32px;
+  max-width: 560px;
+}
+
+/* ✅ FIXED PROFILE IMAGE SIZE */
+.hero-image img {
+  max-width: 240px;
+  width: 100%;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
 }
 
 /* ================= SECTIONS ================= */
@@ -121,20 +135,24 @@ body {
   text-align: center;
 }
 
-/* ================= BUTTON ================= */
+/* ================= BUTTONS ================= */
 .btn {
   padding: 16px 40px;
   border-radius: 12px;
-  background: linear-gradient(135deg,#38bdf8,#6366f1);
-  color: #020617;
   font-weight: 600;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: #020617;
   display: inline-block;
+}
+
+.order-btn {
+  margin-top: 32px;
 }
 
 /* ================= CARDS ================= */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 32px;
   margin-top: 40px;
 }
@@ -142,11 +160,15 @@ body {
 .card {
   padding: 32px;
   border-radius: 20px;
-  background: rgba(255,255,255,.03);
+  background: rgba(255,255,255,0.03);
   border: 1px solid #1e293b;
 }
 
-/* ================= SPLIT ================= */
+.hover-glow:hover {
+  box-shadow: 0 0 0 1px #38bdf8;
+}
+
+/* ================= SPLIT LAYOUT ================= */
 .split {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
@@ -172,24 +194,30 @@ body {
 .list li::before {
   content: "✓ ";
   color: #38bdf8;
-  font-weight: bold;
+  font-weight: 700;
+}
+
+.timeline {
+  list-style: none;
+  margin-bottom: 24px;
 }
 
 .timeline li {
   margin-bottom: 12px;
-  border-left: 2px solid #38bdf8;
   padding-left: 12px;
+  border-left: 2px solid #38bdf8;
 }
 
-/* ================= COLLAPSE ================= */
+/* ================= COLLAPSIBLE ================= */
 .collapse-btn {
   margin: 24px 0 12px;
   padding: 12px 20px;
-  background: rgba(56,189,248,.15);
+  background: rgba(56,189,248,0.15);
   border: 1px solid #38bdf8;
   color: #38bdf8;
   border-radius: 10px;
   cursor: pointer;
+  font-weight: 600;
 }
 
 .collapse-content {
@@ -199,7 +227,7 @@ body {
 /* ================= STEPS ================= */
 .steps {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 28px;
   margin-top: 40px;
 }
@@ -207,19 +235,19 @@ body {
 .step {
   padding: 32px;
   border-radius: 18px;
-  background: rgba(255,255,255,.03);
+  background: rgba(255,255,255,0.03);
   border: 1px solid #1e293b;
 }
 
 .step span {
   font-size: 1.8rem;
-  font-weight: bold;
+  font-weight: 700;
   color: #38bdf8;
 }
 
 /* ================= CONTACT ================= */
 .contact-box {
-  background: rgba(255,255,255,.03);
+  background: rgba(255,255,255,0.03);
   padding: 72px 56px;
   border-radius: 24px;
   border: 1px solid #1e293b;
@@ -229,11 +257,39 @@ body {
   margin-bottom: 32px;
 }
 
-/* ================= ANIMATIONS ================= */
+/* ================= FLOATING SHAPES ================= */
+.floating-shape {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.35;
+  animation: float 8s ease-in-out infinite;
+}
+
+.floating-shape.blue {
+  background: #38bdf8;
+  top: 10%;
+  left: -80px;
+}
+
+.floating-shape.purple {
+  background: #6366f1;
+  bottom: 5%;
+  right: -80px;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-40px); }
+}
+
+/* ================= REVEAL ANIMATION ================= */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
-  transition: .8s ease;
+  transition: 0.8s ease;
 }
 
 .reveal.show {
@@ -248,6 +304,11 @@ body {
   .split.reverse {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  .hero-image img {
+    max-width: 200px;
+    margin: 0 auto;
   }
 
   .nav-links {
