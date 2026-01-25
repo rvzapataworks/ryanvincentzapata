@@ -13,16 +13,16 @@ const observer = new IntersectionObserver(entries => {
       entry.target.classList.add("show");
     }
   });
-},{threshold:.15});
+}, { threshold: 0.15 });
 
 reveals.forEach(el => observer.observe(el));
 
-// Collapsible
-document.querySelectorAll(".collapse-btn").forEach(btn=>{
-  btn.addEventListener("click",()=>{
+// Collapsible sections
+document.querySelectorAll(".collapse-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
     const content = btn.nextElementSibling;
-    const open = content.style.display==="block";
-    content.style.display = open ? "none":"block";
-    btn.textContent = open ? "View Monthly Activities":"Hide Monthly Activities";
+    const open = content.style.display === "block";
+    content.style.display = open ? "none" : "block";
+    btn.textContent = open ? "View Monthly Activities" : "Hide Monthly Activities";
   });
 });
